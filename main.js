@@ -1,3 +1,5 @@
+import crypto from "crypto"
+
 class ProductManager {
     constructor() {
       this.products = [];
@@ -24,7 +26,7 @@ class ProductManager {
         (exists) => exists.code === product.code
       );
       if (exists) {
-        console.error("the product code already exists.");
+        console.error("The product code already exists.");
         return;
       }
   
